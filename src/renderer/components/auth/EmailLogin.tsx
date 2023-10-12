@@ -5,7 +5,7 @@ import { useState, useContext } from 'react';
 
 import eye_slash_icon from '../../../../assets/icons/eye_slash.svg';
 import eye_icon from '../../../../assets/icons/eye.png';
-import { MailContext } from '../../App';
+import MailContext from '../../contexts/MailContext';
 
 const EmailLogin: React.FC = () => {
   const { myPassword, setMyPassword } = useContext(MailContext);

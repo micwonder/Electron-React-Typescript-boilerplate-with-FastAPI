@@ -1,28 +1,13 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, createContext, useContext } from 'react';
+import React from 'react';
+import { useState, createContext } from 'react';
 import './App.css';
-import { app } from 'electron';
-import path from 'path';
 
-import backgroundImg from '../../assets/download/ai-vector2.jpg';
-import decoImg from '../../assets/decoimg.png';
-import xmark from '../../assets/xmark.png';
 import { url } from 'inspector';
+import backgroundImg from '../../assets/download/ai-vector2.jpg';
+import xmark from '../../assets/xmark.png';
 import EmailLogin from './components/auth/EmailLogin';
-
-interface MailContextValue {
-  myPassword: string;
-  setMyPassword: React.Dispatch<React.SetStateAction<string>>;
-  myEmail: string;
-  setMyEmail: React.Dispatch<React.SetStateAction<string>>;
-}
-
-export const MailContext = createContext<MailContextValue>({
-  myPassword: '',
-  setMyPassword: () => {},
-  myEmail: '',
-  setMyEmail: () => {},
-});
+import MailContext from './contexts/MailContext'
 
 const Hello: React.FC = () => {
   const [myPassword, setMyPassword] = useState<string>('');
