@@ -1,5 +1,5 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
+import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 
@@ -7,7 +7,7 @@ import { url } from 'inspector';
 import backgroundImg from '../../assets/download/ai-vector2.jpg';
 import xmark from '../../assets/xmark.png';
 import EmailLogin from './components/auth/EmailLogin';
-import MailContext from './contexts/MailContext'
+import MailContext from './contexts/MailContext';
 
 const Hello: React.FC = () => {
   const [myPassword, setMyPassword] = useState<string>('');
