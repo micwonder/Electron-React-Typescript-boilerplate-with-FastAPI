@@ -20,7 +20,7 @@ const Signin: React.FC = () => {
   };
 
   const sendLoginRequest = () => {
-    fetch('http://127.0.0.1:8000/user/login/', {
+    fetch('http://127.0.0.1:8000/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const Signin: React.FC = () => {
       })
       .catch((error) => {
         NotificationManager.error(error.message);
-        console.error(error); // Handle any other unexpected errors
+        // console.error(error); // Handle any other unexpected errors
       });
   };
 
