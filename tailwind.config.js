@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./src/renderer/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/renderer/**/*.{js,jsx,ts,tsx}',
+    './node_modules/flowbite/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
@@ -25,8 +28,7 @@ module.exports = {
         borderGreyColor: '#c4c4c4',
         borderSelectColor: '#DA123B',
         passwordMediumColor: '#FFDB72',
-        passwordStrongColor: '#2BFA62'
-
+        passwordStrongColor: '#2BFA62',
       },
       fontSize: {
         bigPrimaryButtonTextSize: '20px',
@@ -38,15 +40,14 @@ module.exports = {
         adTitleSmallSize: '25px',
         adDescBigSize: '30px',
         adDescSmallSize: '20px',
-        loginBtnTextSize: '16px'
-
+        loginBtnTextSize: '16px',
       },
       fontFamily: {
-        'sans': ['Ubuntu', 'Helvetica', 'Arial', 'sans-serif'],
-        'serif': ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-        'arial': ['FrutigerLTStd', 'Helvetica', 'Arial', 'sans-serif'],
-        'yamamoto': ['Yantramanav', 'Arial', 'sans-serif'],
-        'SFProDisplay': ['SF Pro Display', 'Arial', 'sans-serif'],
+        sans: ['Ubuntu', 'Helvetica', 'Arial', 'sans-serif'],
+        serif: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+        arial: ['FrutigerLTStd', 'Helvetica', 'Arial', 'sans-serif'],
+        yamamoto: ['Yantramanav', 'Arial', 'sans-serif'],
+        SFProDisplay: ['SF Pro Display', 'Arial', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -55,16 +56,16 @@ module.exports = {
         'services-banner': 'url("/images/services_banner.png")',
       },
       screens: {
-        'sm': { 'min': '0px', 'max': '423px' },
-        'md': { 'min': '424px', 'max': '959px' },
-        'lg': { 'min': '960px', 'max': '1169px' },
-        'xl': { 'min': '1170px', 'max': '1375px' },
-        '2xl': { 'min': '1376px', 'max': '1499px' },
-        '3xl': { 'min': '1500px', 'max': '1750px' },
-        '4xl': { 'min': '1750px' },
-      }
+        sm: { min: '0px', max: '423px' },
+        md: { min: '424px', max: '959px' },
+        lg: { min: '960px', max: '1169px' },
+        xl: { min: '1170px', max: '1375px' },
+        '2xl': { min: '1376px', max: '1499px' },
+        '3xl': { min: '1500px', max: '1750px' },
+        '4xl': { min: '1750px' },
+      },
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };
